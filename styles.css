@@ -10,12 +10,26 @@
 header {
     background-color: #004085;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 120px;
+    height: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin-left: auto;
 }
 
 nav ul li {
