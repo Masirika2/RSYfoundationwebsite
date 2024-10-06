@@ -3,27 +3,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    background: url('https://example.com/background-image.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #333;
+    font-size: 16px;
 }
 
 /* Header Section */
 header {
-    background-color: #004085;
+    background-color: rgba(0, 64, 133, 0.9); /* Slight transparency to allow background to show through */
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 .logo img {
-    max-width: 120px;
+    max-width: 150px;
     height: auto;
 }
 
@@ -35,54 +44,60 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 nav ul li a:hover {
-    color: orange;
+    color: #00aaff;
 }
 
-/* Subscribe Button */
-.subscribe-btn {
-    background-color: orange;
+/* Donate Button */
+.donate-btn {
+    background-color: #00aaff;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
+    margin-left: 20px;
 }
 
-.subscribe-btn:hover {
-    background-color: darkorange;
+.donate-btn:hover {
+    background-color: #007bbf;
 }
 
 /* Hero Section */
 .hero {
-    background: url('https://example.com/hero-image.jpg') no-repeat center center/cover;
+    background: url('/assets/rsylogo.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    position: relative;
+    padding-top: 80px; /* To prevent header overlap */
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 64px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero-content p {
@@ -91,7 +106,7 @@ nav ul li a:hover {
 }
 
 .cta-btn {
-    background-color: orange;
+    background-color: #00aaff;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -100,16 +115,41 @@ nav ul li a:hover {
 }
 
 .cta-btn:hover {
-    background-color: darkorange;
+    background-color: #007bbf;
 }
 
 /* Footer Section */
 footer {
-    background-color: #004085;
+    background-color: rgba(0, 64, 133, 0.9); /* Slight transparency */
     color: white;
     text-align: center;
-    padding: 20px 0;
-    position: absolute;
+    padding: 40px 0;
+    position: relative;
     width: 100%;
-    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
 }
